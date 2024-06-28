@@ -32,5 +32,5 @@ func main() {
 
 	// lakukan migrasi menggunakan
 	// data koneksi DB infrastruktur lama ke baru...
-	fmt.Println(oldInfra, newInfra)
+	fmt.Println(oldInfra, newInfra, "success migrating")
 }
