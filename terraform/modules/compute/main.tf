@@ -38,3 +38,10 @@ resource "google_cloud_run_service" "compute" {
   }
 
 }
+
+resource "google_cloud_run_service_iam_member" "run_all_users" {
+  service  = google_cloud_run_service.compute.name
+  location = google_cloud_run_service.compute.location
+  role     = "roles/run.invoker"
+  member   = "allUsers"
+}

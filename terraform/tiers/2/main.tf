@@ -11,7 +11,7 @@ module "storage" {
 
 module "compute" {
   source = "../../modules/compute"
-
+  depends_on = [module.storage]
   # Pool configuration
   compute_name      = var.infrastructure_id
   storage_host      = module.storage.storage_host
